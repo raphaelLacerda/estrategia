@@ -1,0 +1,7 @@
+---
+- name: Estratégia
+  hosts: test-servers
+  gather_facts: true
+  tasks:
+  - name: Aula Estratégia!
+    shell: echo "O Estratégia aprova mais! Vem com a gente!" >> aprovacao.txt

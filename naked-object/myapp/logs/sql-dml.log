@@ -1,0 +1,18 @@
+2020-02-14 02:31:27.177 INSERT INTO "myapp"."HelloWorldObject" ("name","notes","version") VALUES (<'ola turma'>,<null>,<2020-02-14 02:31:27.176>)
+2020-02-14 02:31:28.661 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:31:32.997 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:31:37.886 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:31:37.969 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:31:38.000 UPDATE "myapp"."HelloWorldObject" SET "notes"=<'nota adicionais'>, "version"=<2020-02-14 02:31:37.998> WHERE "id"=<0>
+2020-02-14 02:31:46.279 INSERT INTO "myapp"."HelloWorldObject" ("name","notes","version") VALUES (<'olha turma 2'>,<null>,<2020-02-14 02:31:46.278>)
+2020-02-14 02:31:46.443 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <1>
+2020-02-14 02:31:49.646 SELECT 'domainapp.dom.impl.HelloWorldObject' AS "NUCLEUS_TYPE","A0"."name","A0"."notes","A0"."id","A0"."version" FROM "myapp"."HelloWorldObject" "A0"
+2020-02-14 02:31:50.118 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:31:50.120 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <1>
+2020-02-14 02:32:01.012 INSERT INTO "myapp"."HelloWorldObject" ("name","notes","version") VALUES (<'gabriel é legal'>,<null>,<2020-02-14 02:32:01.012>)
+2020-02-14 02:32:01.223 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <2>
+2020-02-14 02:32:06.008 SELECT 'domainapp.dom.impl.HelloWorldObject' AS "NUCLEUS_TYPE","A0"."name","A0"."notes","A0"."id","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE (LOCATE(<'gabriel'>,"A0"."name") - 1) <> -1
+2020-02-14 02:32:06.167 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <2>
+2020-02-14 02:32:10.790 SELECT 'domainapp.dom.impl.HelloWorldObject' AS "NUCLEUS_TYPE","A0"."name","A0"."notes","A0"."id","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE (LOCATE(<'turma'>,"A0"."name") - 1) <> -1
+2020-02-14 02:32:10.929 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <0>
+2020-02-14 02:32:10.931 SELECT "A0"."name","A0"."notes","A0"."version" FROM "myapp"."HelloWorldObject" "A0" WHERE "A0"."id" = <1>

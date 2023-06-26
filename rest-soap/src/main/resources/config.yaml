@@ -1,0 +1,8 @@
+kumuluzee:
+  datasources:
+    - jndi-name: jdbc/EstrategiaDS
+      connection-url: jdbc:h2:mem:testdb
+      username: sa
+      password:
+      pool:
+        max-size: 20

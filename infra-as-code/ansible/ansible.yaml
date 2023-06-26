@@ -1,0 +1,11 @@
+---
+- name: Hello World!
+  hosts: test-servers
+  gather_facts: true
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Raphael esta trabalhando com ansible" >> msg.txt
+  - name: "install mysql"
+    package: name=mysql-server state=present
+  

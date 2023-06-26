@@ -1,0 +1,75 @@
+version: '3'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.6.0
+    restart: always
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+      discovery.type: single-node
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+  
+  cassandra:
+    image: cassandra:3.11.6
+    restart: always
+    ports:
+      - "7000:7000"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+
+  neo4j:
+    image: neo4j:4.0.0
+    restart: always
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data/db
+    environment:
+      NEO4J_AUTH: none
+
+  redis:
+    image: redis:5.0.7
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  mongo:
+    image: mongo:3.6.17
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root  
+
+
+
+volumes:
+  es_data: 
+    driver: local
+  mongo_data:
+    driver: local
+  redis_data:
+    driver: local
+  neo4j_data:
+    driver: local
+  cassandra_data:
+    driver: local

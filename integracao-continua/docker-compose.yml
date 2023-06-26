@@ -1,0 +1,72 @@
+version: '3'
+services:
+
+  # sonar:
+  #   image: sonarqube:7.9.2-community
+  #   ports:
+  #     - 9000:9000
+
+  # jenkins:
+  #   image: jenkins:2.60.3
+  #   ports:
+  #     - 8080:8080
+  #   volumes:
+  #     - /tmp/jenkins-data:/var/jenkins_home
+  #     - /Users/lacerdaph/job/frameworks/apache-maven-3.6.3:/app/maven
+  #     - /Users/lacerdaph/job/jvm/jdk13/Contents/Home:/app/jdk
+      
+  jenkins-blueocean:
+    image: jenkins-local:1
+    ports:
+      - 8080:8080
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      #- /home/lacerdaph/jobs/apache-maven-3.6.2/:/app/maven
+      #- /home/lacerdaph/jobs/jvm/jdk-13.0.1/:/app/jdk
+      - /Users/lacerdaph/job/frameworks/apache-maven-3.6.3:/app/maven
+      - /Users/lacerdaph/job/jvm/jdk13/Contents/Home:/app/jdk
+      - /var/run/docker.sock:/var/run/docker.sock
+      
+  
+  # nexus:
+  #   image: sonatype/nexus3
+  #   ports:
+  #     - 8082:8081
+  #   volumes:
+  #     - nexus-data:/nexus-data
+
+  gitlab:
+    image: gitlab/gitlab-ce
+    ports:
+      - 443:443
+      - 80:80
+      - 4567:4567
+    volumes:
+      - gitlab-data-config:/etc/gitlab 
+      - gitlab-data-logs:/var/log/gitlab 
+      - gitlab-data:/var/opt/gitlab
+    hostname: 'localhost'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://172.17.0.1/gitlab'
+
+  # gitlab-runner:
+  #   image: gitlab/gitlab-runner
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - gitlab-runner-1:/etc/gitlab-runner
+  # gitlab-runner-2:
+  #   image: gitlab/gitlab-runner
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - gitlab-runner-2:/etc/gitlab-runner
+
+  
+volumes:
+  gitlab-data-config:
+  gitlab-data-logs:
+  gitlab-data:
+  gitlab-runner-1:
+  gitlab-runner-2:
+  jenkins-data: 
+  nexus-data:

@@ -1,0 +1,2 @@
+[test-servers]
+ubuntu ansible_user=root ansible_password=root

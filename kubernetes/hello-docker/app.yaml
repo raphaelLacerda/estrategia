@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hellonode
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/raphaelLacerda/estrategia.git
+    targetRevision: HEAD
+    # helm:
+    #   valueFiles:
+    #   - values.yaml
+    path: kubernetes/hello-docker/chart
+    directory:
+      recurse: true
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false

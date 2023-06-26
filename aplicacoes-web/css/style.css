@@ -1,0 +1,14 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    background-color: rgb(187, 120, 241)
+}
+
+.header-banner{
+    text-align: center;
+}
+
+input{
+    border-radius: 25px;
+    width: 50%;
+}

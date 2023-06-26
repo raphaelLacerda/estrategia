@@ -1,0 +1,43 @@
+
+stages:
+  - build
+  # - sonar
+  # - publish
+
+build:
+  stage: build
+  image: maven:3.6.3-jdk-13
+  artifacts:
+    name: coverage
+    paths:
+      - ./target/classes
+      - ./target/jacoco.exec
+      - ./target/surefire-reports
+      - ./sonar-project.properties
+    expire_in: 30 mins
+  cache:
+    paths:
+      - .m2/repository
+  script:
+    - mvn clean install
+
+# sonar:
+#   stage: sonar
+#   image: emeraldsquad/sonar-scanner
+#   script:
+#     - sonar-scanner -Dsonar.host.url=172.17.0.1:9000 -Dsonar.login=admin -Dsonar.password=admin
+
+
+
+# publish:
+#   stage: publish
+#   image: docker:stable
+#   before_script:
+#     - echo $CI_REGISTRY
+#     - echo $CI_REGISTRY_USER
+#     - echo $CI_REGISTRY_PASSWORD
+#     - echo $CI_REGISTRY_IMAGE
+#     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+#   script:
+#     - docker build . -t $CI_REGISTRY_IMAGE
+#     - docker push $CI_REGISTRY_IMAGE

@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  csharp:
+    imagem: mcr.microsoft.com/dotnet/sdk:6.0
+    volumes:
+      - ./:/app

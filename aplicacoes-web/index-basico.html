@@ -1,0 +1,53 @@
+<html>
+<head>
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <link href="css/estilo.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header class="header-banner">
+        <img src="img/coruja.png" alt="Coruja social do estratégia">
+        <figcaption>Sistema de Cadastro de aluno</figcaption>
+    </header>
+    <main>
+        <div>
+            <form id="formCadastro">
+                <div>
+                    <div>Nome</div>
+                    <input type="text" id="nome" name="nome" required autofocus>
+                </div>
+                <div>
+                    <div>Email</div>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <div>Data Nascimento</div>
+                    <input style="width: 30%;" type="date" id="dataNascimento" name="dataNascimento">
+                </div>
+                <div>
+                    <div>Cursos de interesse</div>
+                    <input type="checkbox" name="cursos" value="info">Informática
+                    <input type="checkbox" name="cursos" value="da">Direito Administrativo
+                    <input type="checkbox" name="cursos" value="dc">Direito Constitucional
+                    <input type="checkbox" name="cursos" value="dev">Desenvolvimento
+                </div>
+                <div>
+                    <div>Receber news letter?</div>
+                    <input type="radio" name="news" checked>Sim
+                    <input type="radio" name="news">Não
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+        <hr />
+        <div>Listagem</div>
+        <div></div>
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "alunos":[
+        {
+            "id": 1,
+            "nome": "Aluno Exemplo",
+            "email": "exemplo@estrategia.com.br",
+            "dataNascimento": "10/10/2015",
+            "estado": "AC",
+            "cursos": [
+                "direito-administrativo ",
+                "informatica "
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Raphael Henrique Lacerda Pinho",
+            "email": "lacerdaph@gmail.com",
+            "dataNascimento": "10/10/2015",
+            "estado": "DF",
+            "cursos": [
+                "direito-administrativo ",
+                "direito-constitucional "
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "João Gordo",
+            "email": "panelaço@estrategia.com.br",
+            "dataNascimento": "24/04/1956",
+            "estado": "SP",
+            "cursos": [
+                "direito-constitucional "
+            ]
+        }
+    ]
+}

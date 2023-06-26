@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brincando com aluno</title>
+</head>
+<body>
+
+    <button  onclick="indexController.novoAluno()">Adicionar</button>      
+    <button onclick="indexController.mostrarAlunos()">Mostrar Todos</button>
+    <button onclick="indexController.mostrarAlunosAcimaDaMedia()">Mostrar Alunos Acima da Média</button>
+    <button onclick="indexController.calcularTotalGasto()">Total Gasto</button>
+    <hr/>
+    <main id="main"></main>
+    
+</body>
+
+<script>
+
+    if(10 > 3){
+        var teste = "rafa";
+    }
+    console.log(teste)
+</script>
+
+<script src="model/Aluno.js"></script>
+<script src="model/Curso.js"></script>
+<script src="controller/index.js"></script>
+</html>

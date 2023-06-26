@@ -1,0 +1,7 @@
+2020-02-14 02:31:27.968 c163a4a1-4345-418f-a558-44aa212a267f,0: myapp.HelloWorldObject:0 by sven, name: [NEW] -> ola turma
+2020-02-14 02:31:27.977 c163a4a1-4345-418f-a558-44aa212a267f,0: myapp.HelloWorldObject:0 by sven, notes: [NEW] -> null
+2020-02-14 02:31:38.504 7a6af71f-baaf-45e4-bb22-17978df3e186,0: myapp.HelloWorldObject:0 by sven, notes: null -> nota adicionais
+2020-02-14 02:31:46.346 e7a9e7ea-9d6d-47e3-a06d-efb8872effd2,0: myapp.HelloWorldObject:1 by sven, name: [NEW] -> olha turma 2
+2020-02-14 02:31:46.346 e7a9e7ea-9d6d-47e3-a06d-efb8872effd2,0: myapp.HelloWorldObject:1 by sven, notes: [NEW] -> null
+2020-02-14 02:32:01.075 4b3b54b9-19cb-4fa0-9b76-6bacbfe1b0a4,0: myapp.HelloWorldObject:2 by sven, name: [NEW] -> gabriel é legal
+2020-02-14 02:32:01.076 4b3b54b9-19cb-4fa0-9b76-6bacbfe1b0a4,0: myapp.HelloWorldObject:2 by sven, notes: [NEW] -> null

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-node
+spec:
+  #ClusterIP é o default
+  # type: LoadBalancer
+  type: NodePort
+  selector:
+    app: hello-node
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30007
